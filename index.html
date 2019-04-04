@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>|Test|</title>
+	<style>
+		.test-one{
+			height: 140vh;
+			background: url('hero.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+		}
+
+		ul {
+			list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+        	float: left;
+        }
+
+        li a {
+        	display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+        	background-color: black;
+        }
+
+        li a.active {
+        	color: white;
+            background-color: #4CAF50;
+        }
+
+        i {
+        	border: solid white;
+            border-width: 0 7px 7px 0;
+            display: inline-block;
+            padding: 8px;
+            margin-left: 650px;
+            margin-top: 310px;
+        }
+
+        .down {
+        	transform: rotate(45deg);
+        	-webkit-transform: rotate(45deg);
+        }
+
+
+		.test-two{
+			height: 60vh;
+			background: url('about.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+		.test-checkbox{
+			height: 100px;
+			background-color:#D5CECE;
+			width: 100%;
+		}
+
+		.checkbox-floatleft{
+			float: left;
+			margin-top: 50px;
+			margin-left: 30px;
+		}
+
+		.checkbox-floatright{
+			float: right;
+			margin-top: 40px;
+			margin-right: 30px;
+			padding: 10px;
+			background-color: #500B0B;
+			color: #fff;
+			border-color: #500B0B;
+		}
+
+		input[type="checkbox"]:hover{
+			transform:scale(1.2);
+			color: red;
+		}
+
+		.men-one{
+			background: url("tshirt.png");
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-left: 10px;
+			display: inline-block;
+			margin-left: 80px;
+			border: 4px solid #746F3E;
+
+		}
+
+		.men-two{
+			background: url("pants.png");
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			margin-left: 60px;
+
+		}
+		.men-three{
+			background: url("backpack.png");
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			margin-left: 60px;
+			
+		}
+
+		.men-four{
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			display: inline-block;
+			margin-left: 60px;
+		}
+		.men-five{
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			display: inline-block;
+			margin-left: 60px;
+			
+		}
+
+		.women-one{
+			background: url("giacket.png");
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-left: 10px;
+			display: inline-block;
+			margin-left: 80px;
+
+		}
+		.women-two{
+			background: url("trekkingshoes.png");
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			margin-left: 60px;
+
+		}
+		.women-three{
+			background: url("tshirt_ladies.png");
+			height: 320px;
+			width: 270px;
+			background-color: #EDEDED;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			margin-left: 60px;
+			
+		}
+		/*slider content */
+		.slidershow-container{
+			background-color: #FFFFFF;
+			max-width: 100%;
+			padding-top:55px; 
+	
+		}
+
+		.slidershow-containers{
+			background-color: #FFFFFF;
+			max-width: 100%;
+			padding-top:55px; 
+	
+		}
+
+		.slidershow-containerz{
+			background-color: #FFFFFF;
+			max-width: 100%;
+			padding-top:55px; 
+	
+		}
+		
+		.content{
+			vertical-align:middle;
+		}
+
+		.prev, .next{
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+
+		}
+
+		.modify{
+			float: right;
+			margin-top: -10px;
+			padding-right: 50px;
+		}
+
+		.mySlides{
+			display: inline-block;
+			height: 320px;
+			width: 270px;
+			margin-top: 50px;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			margin-left: 70px;
+		}
+
+		.numbertext{
+			font-size: 12px;
+			top: 0;
+		}
+
+		.testthree{
+			display: inline-block;
+			display: none;
+		}
+
+		.testthrees{
+			display: inline-block;
+			display: none;
+		}
+
+		.testthreez{
+			display: inline-block;
+			display: none;
+		}
+
+		.inlineblock{
+		padding-left: 80px;
+		padding-top: 75px;
+		padding-bottom: 20px;
+		}
+
+		hr{
+			width: 864px;
+			background-color:#B7E1F2;
+		}
+
+
+		.filterDiv{
+			display: none;
+		}
+
+		.show{
+			display: block;
+		}
+
+		.countleft{
+        float: right;
+        margin-right: 50px;
+        font-weight: bold;
+        margin-top:-20px;
+		}
+
+		.fade {
+			-webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+        	from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+        	from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        .sale{
+			text-align: center;
+			margin-top: 0px;
+			background-color: #545454;
+			color: white;
+			margin-bottom: 0px;
+
+		}
+
+		.social{
+			color: white;
+			background-color: #363636;
+
+		}
+
+		 #circle { 
+		 	width: 18px; 
+		 	height: 18px; 
+		 	border-radius: 50%;
+		}
+
+		.dropbtn {
+			background-color: #EDEDED;
+            color: black;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+        	position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+        	display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 60px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+        	color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+        	display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+        	background-color: #3e8e41;
+        }
+
+        r {
+        	border: solid black;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            margin-left: 10px;
+        }
+
+	</style>
+</head>
+<body> 
+
+<div class="test-one">
+		<ul>
+		<li style="margin-top: 20px;">
+			<img src="logo.png">
+		</li>
+		<li style="margin-left: 870px; margin-top: 30px;"><a href="#">Home</a></li>
+		<li style="margin-top: 30px;"><a href="#">Products</a></li>
+		<li style="margin-top: 30px;">
+			<a><img src="shop.png"></a>
+		</li>
+	</ul>
+
+	<div style="text-align: center; margin-top: 280px; color: white;">
+		<h1>Our clothing, your comfort</h1><br>
+		<p>We understand that you need to look good and feel great.</p>
+		<p>It all starts with what you are wearing.</p>
+	</div>
+	<a href="#products"><i class="arrow down"></i></a>
+</div>
+
+<div class="test-checkbox" id="myBtnContainer">
+	<div class="checkbox-floatleft"><input type="checkbox" name="" onclick="filterSelection('men')">&nbsp;&nbsp;MEN
+	<input type="checkbox" onclick="filterSelection('women')" >&nbsp;&nbsp;WOMEN
+	<input type="checkbox"  onclick="filterSelection('children')" >&nbsp;&nbsp;CHILDREN</div>
+	<button class="checkbox-floatright" onclick="filterSelection('all')">See All Products</button>
+</div>
+
+<div id="products">
+	<div class="filterDiv men" style="margin-left: 125px;">
+	<div class="slidershow-container">
+		<table class="inlineblock"> <tr><td>MEN</td><td style=" padding-left: 30px;"> <hr/></td></tr></table>
+		<div class="countleft" style="color: #746F3E; padding-right: 140px;">3/5</div>
+		<div class="modify" style="color: #746F3E; padding-right: 190px;margin-top: 2px;"><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+
+		<div class="testthree" style="margin-top: 25px;">
+			<div class="men-one">
+				<div>
+                    <table>
+                    	<tr>
+                    		<td>
+                    			<div class="dropdown">
+                    				<button class="dropbtn">SIZE<r class="arrow down"></r></button>
+                    				<div class="dropdown-content">
+                    				 <a href="#">12</a>
+                    				 <a href="#">8</a>
+                    				 <a href="#">4</a>
+                    				</div>
+                    			</div>
+                    		</td>
+                    		<td>
+                    			<div id="circle" style="background: green; margin-left: 136px; margin-top: 5px;"></div>
+                    		</td>
+                    		<td>
+                    			<div id="circle" style="background: blue; margin-top: 5px;"></div>
+                    		</td>
+                    		<td>
+                    			<div id="circle" style="background: brown; margin-top: 5px;"></div>
+                    		</td>
+                    	</tr>
+                    </table>
+				</div>
+				<div  style="margin-top: 254px; margin-left: 5px; color: #746F3E;">
+					<table>
+						<tr>
+							<td>T-SHIRT</td>
+							<td style="padding-left: 120px;">5,00 &euro;</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="men-two">
+
+				<div>
+                    <table>
+                    	<tr>
+                    		<td>
+                    			<div class="dropdown">
+                    				<button class="dropbtn">SIZE<r class="arrow down"></r></button>
+                    				<div class="dropdown-content">
+                    				 <a href="#">12</a>
+                    				 <a href="#">8</a>
+                    				 <a href="#">4</a>
+                    				</div>
+                    			</div>
+                    		</td>
+                    	</tr>
+                    </table>
+				</div>
+
+				<div style="margin-top: 260px; margin-left: 5px; color: #746F3E;">
+					<table>
+						<tr>
+							<td>PANTS FORCLAZ</td>
+							<td style="padding-left: 50px;">30,00 &euro;</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="men-three">
+				<div>
+					<table>
+						<tr>
+							<td>10 litri</td>
+						</tr>
+					</table>
+				</div>
+				<div style="margin-top: 260px; margin-left: 5px; color: #746F3E;">
+					<table>
+						<tr>
+							<td>BACKPACK</td>
+							<td style="padding-left: 100px;">60,00 &euro;</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="testthree">
+			<div class="men-four"></div>
+
+			<div class="men-five"></div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var slideIndex = 1;
+	showSliders(slideIndex);
+	function plusSlides(n){
+		showSliders(slideIndex  += n);
+	}
+	function showSliders(n){
+		var x;
+		var slides = document.getElementsByClassName("testthree");
+		if (n > slides.length){slideIndex=1}
+		if (n < 1) {slideIndex = slides.length}
+			for (x = 0; x < slides.length; x++) {
+				slides[x].style.display = "none";
+			}
+			slides[slideIndex-1].style.display="block";
+	}
+</script>
+
+<div class="filterDiv women" style="margin-left: 125px;">
+<div class="slidershow-containers">
+	<table class="inlineblock"> <tr><td> <hr/></td><td>WOMEN</td></tr></table>
+	<div class="countleft" style="color: #746F3E; padding-right: 140px;">3/5</div>
+	<div class="modify" style="padding-right: 190px;margin-top: 2px; color: #746F3E;"><a class="prev" onclick="plusSlidesz(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlidesz(1)">&#10095;</a></div>
+
+	<div class="testthrees" style="margin-top: 25px;">
+		<div class="women-one">
+			<div>
+                    <table>
+                    	<tr>
+                    		<td>
+                    			<div class="dropdown">
+                    				<button class="dropbtn">SIZE<r class="arrow down"></r></button>
+                    				<div class="dropdown-content">
+                    				 <a href="#">12</a>
+                    				 <a href="#">8</a>
+                    				 <a href="#">4</a>
+                    				</div>
+                    			</div>
+                    		</td>
+                    	</tr>
+                    </table>
+				</div>
+			<div style="margin-top: 265px; margin-left: 5px; color: #746F3E;">
+					<table>
+						<tr>
+							<td>GIACKET</td>
+							<td style="padding-left: 100px;">60,00 &euro;</td>
+						</tr>
+					</table>
+				</div>
+		</div>
+		<div class="women-two">
+
+			<div>
+                    <table>
+                    	<tr>
+                    		<td>
+                    			<div class="dropdown">
+                    				<button class="dropbtn">SIZE<r class="arrow down"></r></button>
+                    				<div class="dropdown-content">
+                    				 <a href="#">12</a>
+                    				 <a href="#">8</a>
+                    				 <a href="#">4</a>
+                    				</div>
+                    			</div>
+                    		</td>
+                    	</tr>
+                    </table>
+				</div>
+
+			<div style="margin-top: 265px; margin-left: 5px; color: #746F3E;">
+					<table>
+						<tr>
+							<td>TREKKING SHOES</td>
+							<td style="padding-left: 35px;">80,00 &euro;</td>
+						</tr>
+					</table>
+				</div>
+		</div>
+		<div class="women-three">
+
+                    <table>
+                    	<tr>
+                    		<td>
+                    			<div>
+                    <table>
+                    	<tr>
+                    		<td>
+                    			<div class="dropdown">
+                    				<button class="dropbtn">SIZE<r class="arrow down"></r></button>
+                    				<div class="dropdown-content">
+                    				 <a href="#">12</a>
+                    				 <a href="#">8</a>
+                    				 <a href="#">4</a>
+                    				</div>
+                    			</div>
+                    		</td>
+                    	</tr>
+                    </table>
+				</div>
+			<div>
+                    		</td>
+                    		<td>
+                    			<div id="circle" style="background: #934D7A; margin-left: 160px; margin-top: 5px;"></div>
+                    		</td>
+                    		<td>
+                    			<div id="circle" style="background: white; margin-top: 5px;"></div>
+                    		</td>
+                    	</tr>
+                    </table>
+				</div>
+			<div style="margin-top: -30px; margin-left: 755px; color: #746F3E;">
+					<table>
+						<tr>
+							<td>T-SHIRT</td>
+							<td style="padding-left: 100px;">20,00 &euro;</td>
+						</tr>
+					</table>
+				</div>
+		</div>
+</div>
+
+<div class="testthrees">
+	<div class="mySlides fade"  style="background-color:#EDEDED">
+	<div class="numbertext">4/5</div>
+	<div class="content">put4in content one</div>
+	</div>
+	<div class="mySlides fade"  style="background-color:#EDEDED">
+	<div class="numbertext">5/5</div>
+	<div class="content">put in content one</div>
+</div></div>
+</div></div>
+
+<script>
+	var slideIndex = 1;
+	showSliderss(slideIndex);
+	function plusSlidesz(n){
+		showSliderss(slideIndex  += n);
+	}
+	function showSliderss(n){
+		var x;
+		var slides = document.getElementsByClassName("testthrees");
+		if (n > slides.length){slideIndex=1}
+		if (n < 1) {slideIndex = slides.length}
+			for (x = 0; x < slides.length; x++) {
+				slides[x].style.display = "none";
+			}
+			slides[slideIndex-1].style.display="block";
+	}
+</script>
+
+<div class="filterDiv children" style="margin-bottom: 100px; margin-left: 125px;">
+<div class="slidershow-containers">
+	<table class="inlineblock"> <tr><td>CHILDREN</td><td > <hr/></td></tr></table>
+	<div class="countleft" style="color: #746F3E; padding-right: 140px;">3/5</div>
+	<div class="modify" style="padding-right: 190px;margin-top: 2px; color: #746F3E;"><a class="prev" onclick="plusSlidesc(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlidesc(1)">&#10095;</a></div>
+	<div class="testthreez" style="margin-top: 25px;">
+	<div class="mySlides fade" style="background-color: #EDEDED">
+	<div class="numbertext">1/5</div>
+	<div class="content">put in content one</div>
+	</div>
+	<div class="mySlides fade"  style="background-color: #EDEDED">
+	<div class="numbertext">2/5</div>
+	<div class="content">put in content two</div>
+	</div>
+	<div class="mySlides fade"  style="background-color:#EDEDED">
+	<div class="numbertext">3/5</div>
+	<div class="content">put in content three</div>
+	</div>
+</div>
+<div class="testthreez">
+	<div class="mySlides fade"  style="background-color:#EDEDED">
+	<div class="numbertext">4/5</div>
+	<div class="content">put4in content four</div>
+	</div>
+	<div class="mySlides fade"  style="background-color:#EDEDED">
+	<div class="numbertext">5/5</div>
+	<div class="content">put in content five</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="test-two">
+	<div style="padding-top: 60px; color: white; padding-left: 250px;">
+		<div style="display: inline-block;">
+			<hr style="width: 175px; margin-left: 194px; color: #746F3E;">
+		</div>
+
+		<div style="display: inline-block;">
+			<p style="margin-left: 10px;">ABOUT US</p>
+		</div>
+
+		<div style="display: inline-block;">
+			<hr style="width: 175px; margin-left: 10px; color: #746F3E;">
+		</div>
+
+		<div style="margin-top: -38px; margin-left: -700px;">
+			<hr style="width: 0px; height: 200px; color: #746F3E;">
+		</div>
+
+		<div style="margin-top: -210px; margin-left: 250px;">
+			<hr style="width: 0px; height: 200px; color: #746F3E;">
+		</div>
+
+		<div>
+		 	<p style="margin-left: 270px; margin-top: -180px; ">This is where high-fashion clothing is</p>
+    	    <p style="margin-left: 260px;">designed and crafted from the heart by</p>
+    	    <p style="margin-left: 275px;">an amazing team of craftsmen and</p>
+    	    <p style="margin-left: 260px;">designers who understand what fashion</p>
+    	    <p style="margin-left: 390px;">is.</p>
+    	</div>
+
+    	<div>
+    		<hr style="width: 474px; margin-left: 193px; margin-top: -5px; color: #746F3E;">
+    	</div>
+    </div>
+</div>
+	</div>
+<script>
+	var slideIndex = 1;
+	showSlidersz(slideIndex);
+	function plusSlidesc(n){
+		showSlidersz(slideIndex  += n);
+	}
+	function showSlidersz(n){
+		var x;
+		var slides = document.getElementsByClassName("testthreez");
+		if (n > slides.length){slideIndex=1}
+		if (n < 1) {slideIndex = slides.length}
+			for (x = 0; x < slides.length; x++) {
+				slides[x].style.display = "none";
+			}
+			slides[slideIndex-1].style.display="block";
+	}
+</script>
+<script>
+	//now filter the entire content
+	filterSelection("all");
+	function filterSelection(c){
+ var x, i;
+ x= document.getElementsByClassName("filterDiv");
+ if (c=="all") c="";
+ for (i=0; i<x.length;i++) {
+ 	meRemoveClass(x[i],"show");
+ 	if (x[i].className.indexOf(c) > -1) meAddClass(x[i],"show");
+ }
+	}
+	function meAddClass(element, name){
+		var i,arr1,arr2;
+		arr1 =element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i=0;i<arr2.length; i++) {
+			if (arr1.indexOf(arr2[i])== -1) {element.className +=" " + arr2[i];}
+		}
+	}
+	function meRemoveClass(element, name){
+	var i,arr1,arr2;
+	
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i=0;i< arr2.length; i++) {
+			while(arr1.indexOf(arr2[i])>-1){
+				arr1.splice(arr1.indexOf(arr2[i]), 1);
+			}
+		}	
+		element.className = arr1.join(" ");
+	}
+</script>
+
+<div class="sale">
+	<table>
+		<tr>
+			<td style="padding-left: 40px;"><img src="twitter_bird.png"></td>
+			<td style="padding-left: 30px;"><p>"SALE:Buy anything for 45% off. Use the promo CODE YOLOMY45 when you buy items"</p></td>
+		</tr>
+	</table>
+</div>
+
+<div class="social">
+	<table>
+		<tr>
+			<td><div style="margin-left: 40px; margin-top: 40px;">
+				<h2>YOLOMY</h2>
+		<p>WE ARE YOLOMY-WE UNDERSTAND</p>
+	    <p>FASHION AND STYLE. WE CRAFT OUR</p>
+	    <p>PRODUCTS WITH LOVE AND DLIGENCE.</p>
+	</div>
+			</td>
+
+			<td align="center"><div style="margin-left: 90px;">
+				<p align="center">We are social</p>
+			<p align="center">
+				<a href="#"><img src="g_plus.png"></a> <a href="#"><img src="facebook.png"> </a><a href="#"><img src="you_tube.png"></a> <a href="#"><img src="stumble_upon.png"></a>
+			</p>
+			<p align="center">
+				<a href="#"><img src="skype.png"></a> <a href="#"><img src="flickr.png"></a> <a href="#"><img src="twitter.png"></a> <a href="#"><img src="pinterest.png"></a>
+			</p>
+		</div>
+			</td>
+			<td><div style="margin-left: 100px; margin-top: 60px;">
+				<ul>
+					<li>CREDITS|</li>
+					<li>PRIVACY|</li>
+					<li>ABOUT|</li>
+					<li>CONTACT</li>
+				</ul>
+				<p><h3>Yolomy:We Mean Fashion</h3></p>
+			</td>
+		</div>
+		</tr>
+	</table>
+
+	<div style="margin-left: 480px; margin-top: 50px; padding-bottom: 20px;">
+	<p>COPYRIGHT 2015. YOLOMY INC</p>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+</body>
+</html>
