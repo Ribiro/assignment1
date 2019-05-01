@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>|Test|</title>
 	<style>
+		body{
+            margin: 0px; padding: 0px;
+        }
+
 		.test-one{
 			height: 140vh;
 			background: url('hero.jpg');
@@ -113,7 +117,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			display: inline-block;
-			margin-left: 60px;
+			margin-left: 80px;
 
 		}
 		.men-three{
@@ -124,25 +128,10 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			display: inline-block;
-			margin-left: 60px;
+			margin-left: 80px;
 			
 		}
 
-		.men-four{
-			height: 320px;
-			width: 270px;
-			background-color: #EDEDED;
-			display: inline-block;
-			margin-left: 60px;
-		}
-		.men-five{
-			height: 320px;
-			width: 270px;
-			background-color: #EDEDED;
-			display: inline-block;
-			margin-left: 60px;
-			
-		}
 
 		.women-one{
 			background: url("giacket.png");
@@ -164,7 +153,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			display: inline-block;
-			margin-left: 60px;
+			margin-left: 80px;
 
 		}
 		.women-three{
@@ -175,43 +164,13 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			display: inline-block;
-			margin-left: 60px;
+			margin-left: 80px;
 			
 		}
 		/*slider content */
-		.slidershow-container{
-			background-color: #FFFFFF;
-			max-width: 100%;
-			padding-top:55px; 
-	
-		}
-
-		.slidershow-containers{
-			background-color: #FFFFFF;
-			max-width: 100%;
-			padding-top:55px; 
-	
-		}
-
-		.slidershow-containerz{
-			background-color: #FFFFFF;
-			max-width: 100%;
-			padding-top:55px; 
-	
-		}
 		
 		.content{
 			vertical-align:middle;
-		}
-
-		.prev, .next{
-			cursor: pointer;
-			font-weight: bold;
-			font-size: 18px;
-			transition: 0.6s ease;
-			border-radius: 0 3px 3px 0;
-			user-select: none;
-
 		}
 
 		.modify{
@@ -272,8 +231,13 @@
 
 		.countleft{
         float: right;
-        margin-right: 50px;
-        font-weight: bold;
+        margin-right: 60px;
+        margin-top:-20px;
+		}
+
+		.countleft2{
+        float: left;
+        margin-left:80px;
         margin-top:-20px;
 		}
 
@@ -361,13 +325,35 @@
             margin-left: 10px;
         }
 
+        .boxed {
+            padding-top: 10px;
+    position: relative;
+    background: white;
+    border: 2px solid  #746F3E;
+    width: 45vw;
+    height: 35vh;
+    background-color:transparent;
+    color: #746F3E;
+    margin: auto;
+}
+.label {
+    padding: 0 5px;
+    position: absolute;
+    left: 37%;
+    top: -8px;
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+    
+}
+
 	</style>
 </head>
 <body> 
 
 <div class="test-one">
 		<ul>
-		<li style="margin-top: 20px;">
+		<li style="margin-top: 20px; margin-left: 30px;">
 			<img src="logo.png">
 		</li>
 		<li style="margin-left: 870px; margin-top: 30px;"><a href="#">Home</a></li>
@@ -387,18 +373,18 @@
 
 <div class="test-checkbox" id="myBtnContainer">
 	<div class="checkbox-floatleft"><input type="checkbox" name="" onclick="filterSelection('men')">&nbsp;&nbsp;MEN
-	<input type="checkbox" onclick="filterSelection('women')" >&nbsp;&nbsp;WOMEN
-	<input type="checkbox"  onclick="filterSelection('children')" >&nbsp;&nbsp;CHILDREN</div>
+	<input type="checkbox">&nbsp;&nbsp;WOMEN
+	<input type="checkbox">&nbsp;&nbsp;CHILDREN</div>
 	<button class="checkbox-floatright" onclick="filterSelection('all')">See All Products</button>
 </div>
 
 <div id="products">
 	<div class="filterDiv men" style="margin-left: 125px;">
 	<div class="slidershow-container">
-		<table class="inlineblock"> <tr><td>MEN</td><td style=" padding-left: 30px;"> <hr/></td></tr></table>
-		<div class="countleft" style="color: #746F3E; padding-right: 140px;">3/5</div>
-		<div class="modify" style="color: #746F3E; padding-right: 190px;margin-top: 2px;"><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<table class="inlineblock"> <tr><td>MEN</td><td style=" padding-left: 70px;"> <hr/></td></tr></table>
+		<div class="countleft" style="color: #746F3E; padding-right: 100px;">1/5</div>
+		<div class="modify" style="color: #746F3E; padding-right: 160px;margin-top: 2px;"><a>&#10094;</a>
+			<a>&#10095;</a>
 		</div>
 
 		<div class="testthree" style="margin-top: 25px;">
@@ -485,41 +471,16 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="testthree">
-			<div class="men-four"></div>
-
-			<div class="men-five"></div>
-		</div>
 	</div>
-</div>
 
-<script>
-	var slideIndex = 1;
-	showSliders(slideIndex);
-	function plusSlides(n){
-		showSliders(slideIndex  += n);
-	}
-	function showSliders(n){
-		var x;
-		var slides = document.getElementsByClassName("testthree");
-		if (n > slides.length){slideIndex=1}
-		if (n < 1) {slideIndex = slides.length}
-			for (x = 0; x < slides.length; x++) {
-				slides[x].style.display = "none";
-			}
-			slides[slideIndex-1].style.display="block";
-	}
-</script>
 
-<div class="filterDiv women" style="margin-left: 125px;">
 <div class="slidershow-containers">
-	<table class="inlineblock"> <tr><td> <hr/></td><td>WOMEN</td></tr></table>
-	<div class="countleft" style="color: #746F3E; padding-right: 140px;">3/5</div>
-	<div class="modify" style="padding-right: 190px;margin-top: 2px; color: #746F3E;"><a class="prev" onclick="plusSlidesz(-1)">&#10094;</a>
+	<table class="inlineblock"> <tr><td> <hr/></td><td style="padding-left: 35px;">WOMEN</td></tr></table>
+	<div class="countleft2" style="color: #746F3E;">1/5</div>
+	<div class="modify" style=" float: left; margin-left:80px; margin-top: 2px; color: #746F3E;"><a>&#10094;</a>
 	<a class="next" onclick="plusSlidesz(1)">&#10095;</a></div>
 
-	<div class="testthrees" style="margin-top: 25px;">
+	<div class="testthrees" style="margin-top: 25px; margin-bottom: 50px;">
 		<div class="women-one">
 			<div>
                     <table>
@@ -606,27 +567,37 @@
                     	</tr>
                     </table>
 				</div>
-			<div style="margin-top: -30px; margin-left: 755px; color: #746F3E;">
+			<div style="margin-top: -30px; margin-left:800px; color: #746F3E;">
 					<table>
 						<tr>
 							<td>T-SHIRT</td>
-							<td style="padding-left: 100px;">20,00 &euro;</td>
+							<td style="padding-left: 120px;">20,00 &euro;</td>
 						</tr>
 					</table>
 				</div>
 		</div>
 </div>
+</div>
 
-<div class="testthrees">
-	<div class="mySlides fade"  style="background-color:#EDEDED">
-	<div class="numbertext">4/5</div>
-	<div class="content">put4in content one</div>
-	</div>
-	<div class="mySlides fade"  style="background-color:#EDEDED">
-	<div class="numbertext">5/5</div>
-	<div class="content">put in content one</div>
-</div></div>
-</div></div>
+<script>
+	var slideIndex = 1;
+	showSliders(slideIndex);
+	function plusSlides(n){
+		showSliders(slideIndex  += n);
+	}
+	function showSliders(n){
+		var x;
+		var slides = document.getElementsByClassName("testthree");
+		if (n > slides.length){slideIndex=1}
+		if (n < 1) {slideIndex = slides.length}
+			for (x = 0; x < slides.length; x++) {
+				slides[x].style.display = "none";
+			}
+			slides[slideIndex-1].style.display="block";
+	}
+</script>
+
+
 
 <script>
 	var slideIndex = 1;
@@ -646,72 +617,22 @@
 	}
 </script>
 
-<div class="filterDiv children" style="margin-bottom: 100px; margin-left: 125px;">
-<div class="slidershow-containers">
-	<table class="inlineblock"> <tr><td>CHILDREN</td><td > <hr/></td></tr></table>
-	<div class="countleft" style="color: #746F3E; padding-right: 140px;">3/5</div>
-	<div class="modify" style="padding-right: 190px;margin-top: 2px; color: #746F3E;"><a class="prev" onclick="plusSlidesc(-1)">&#10094;</a>
-	<a class="next" onclick="plusSlidesc(1)">&#10095;</a></div>
-	<div class="testthreez" style="margin-top: 25px;">
-	<div class="mySlides fade" style="background-color: #EDEDED">
-	<div class="numbertext">1/5</div>
-	<div class="content">put in content one</div>
-	</div>
-	<div class="mySlides fade"  style="background-color: #EDEDED">
-	<div class="numbertext">2/5</div>
-	<div class="content">put in content two</div>
-	</div>
-	<div class="mySlides fade"  style="background-color:#EDEDED">
-	<div class="numbertext">3/5</div>
-	<div class="content">put in content three</div>
-	</div>
-</div>
-<div class="testthreez">
-	<div class="mySlides fade"  style="background-color:#EDEDED">
-	<div class="numbertext">4/5</div>
-	<div class="content">put4in content four</div>
-	</div>
-	<div class="mySlides fade"  style="background-color:#EDEDED">
-	<div class="numbertext">5/5</div>
-	<div class="content">put in content five</div>
-	</div>
-</div>
-</div>
-</div>
-
 <div class="test-two">
-	<div style="padding-top: 60px; color: white; padding-left: 250px;">
-		<div style="display: inline-block;">
-			<hr style="width: 175px; margin-left: 194px; color: #746F3E;">
-		</div>
+	<div style="padding-top: 5%;">
 
-		<div style="display: inline-block;">
-			<p style="margin-left: 10px;">ABOUT US</p>
-		</div>
+		<p style="display: inline-block; margin:">
+		<div class="boxed"> 
+            <span class="label">ABOUT US</span>
+            <div style="text-align: center; color: white;">
+                <p>This is where high-fashion clothing is</p>
+                <p>designed and crafted from the heart by</p>
+                <p>an amazing team of craftsmen and</p>
+                <p>designers who understand what fashion</p>
+               <p>is</p>
+           </div>
+       </div>
+       </p>
 
-		<div style="display: inline-block;">
-			<hr style="width: 175px; margin-left: 10px; color: #746F3E;">
-		</div>
-
-		<div style="margin-top: -38px; margin-left: -700px;">
-			<hr style="width: 0px; height: 200px; color: #746F3E;">
-		</div>
-
-		<div style="margin-top: -210px; margin-left: 250px;">
-			<hr style="width: 0px; height: 200px; color: #746F3E;">
-		</div>
-
-		<div>
-		 	<p style="margin-left: 270px; margin-top: -180px; ">This is where high-fashion clothing is</p>
-    	    <p style="margin-left: 260px;">designed and crafted from the heart by</p>
-    	    <p style="margin-left: 275px;">an amazing team of craftsmen and</p>
-    	    <p style="margin-left: 260px;">designers who understand what fashion</p>
-    	    <p style="margin-left: 390px;">is.</p>
-    	</div>
-
-    	<div>
-    		<hr style="width: 474px; margin-left: 193px; margin-top: -5px; color: #746F3E;">
-    	</div>
     </div>
 </div>
 	</div>
